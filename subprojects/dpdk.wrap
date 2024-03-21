@@ -1,0 +1,5 @@
+[wrap-file]
+directory = dpdk-25.03
+source_url = https://fast.dpdk.org/rel/dpdk-25.03.tar.xz
+source_filename = dpdk-25.03.tar.xz
+source_hash = 6A40A731328286EBD79685B18FFA5992E6B770C13843D65FD0D1157CFCCFF63D

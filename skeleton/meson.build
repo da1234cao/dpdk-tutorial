@@ -1,0 +1,1 @@
+executable('skeleton', 'basicfwd.c', dependencies: libdpdk_dep)

@@ -1,0 +1,5 @@
+option(
+    'enable_subs',
+    type: 'array',
+    value: [],
+)

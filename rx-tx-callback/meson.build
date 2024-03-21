@@ -1,0 +1,1 @@
+executable('rx-tx-callback', 'rx_tx_callbak.c', dependencies: libdpdk_dep)

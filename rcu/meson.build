@@ -1,0 +1,1 @@
+executable('dpdk_rcu_test', 'dpdk_rcu_test.c', dependencies: libdpdk_dep)
