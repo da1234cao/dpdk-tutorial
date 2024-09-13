@@ -1,0 +1,1 @@
+executable('hello-world', 'main.c', dependencies: libdpdk_dep)

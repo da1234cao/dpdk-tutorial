@@ -1,6 +1,10 @@
 # 编译输出目录
 **/build
 
+packagecache
+dpdk-stable-*
+!*.wrap
+
 # vscode配置
 **/.vscode/
 

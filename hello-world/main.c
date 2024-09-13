@@ -1,6 +1,9 @@
+#include <rte_common.h>
 #include <rte_eal.h>
 #include <rte_lcore.h>
+
 #include <stdio.h>
+#include <stdlib.h>
 
 int lcore_hello(__rte_unused void *arg) {
   unsigned int lcore_id = rte_lcore_id();

@@ -1,0 +1,5 @@
+[wrap-file]
+directory = dpdk-stable-23.11.2
+source_url = https://fast.dpdk.org/rel/dpdk-23.11.2.tar.xz
+source_filename = dpdk-23.11.2.tar.xz
+source_hash = fbe4f971326653a2b9dc203dbfa990731e590b2e684e038b0513f45abf1a6cda

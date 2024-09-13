@@ -1,11 +1,15 @@
 # dpdk-tutorial
 
+```shell
+# 准备一个pyenv环境，安装下面依赖
+python3 -m pip install -i https://pypi.tuna.tsinghua.edu.cn/simple --upgrade pip
+pip config set global.index-url https://pypi.tuna.tsinghua.edu.cn/simple
+pip install msgpack scapy PrettyTable pyelftools Nuitka zstandard ptf
+
+meson setup build && cd build
+meson compile
+```
+
 ## dpdk的使用 - step by step
 
-1. [dpdp-hello-world](./dpdp-hello-world)
-2. [dpdk二层转发环境搭建-二](https://blog.csdn.net/sinat_38816924/article/details/136821484)
-3. [dpdp-skeleton - 已废弃](./dpdp-skeleton)
-4. [dpdk-multi-process-msg](./dpdk-multi-process-msg)
-5. [dpdk-trace](./dpdk-trace)
-6. [dpdk-rx-tx-callbak](./dpdk-rx-tx-callback)
-7. [dpdk-flow](./dpdk-flow/)
+todo
