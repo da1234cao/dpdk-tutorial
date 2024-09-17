@@ -1,0 +1,12 @@
+option(
+    'enable_subs',
+    type: 'array',
+    value: [
+        'hello-world',
+        'skeleton',
+        'multi-process-msg',
+        'trace',
+        'rx-tx-callback',
+        'rcu',
+    ],
+)

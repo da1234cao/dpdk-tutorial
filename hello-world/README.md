@@ -2,7 +2,7 @@
 
 ## 前言
 
-本文目标: 在linux上安装DPDK的程序编写环境，编写和运行DPDK的hello world程序。
+本文目标: 在linux编写和运行DPDK的hello world程序。
 
 [DPDK](https://www.dpdk.org/about/)的目的大概是：原先的网络数据需要经过内核协议栈，然后从内核层拷贝到用户层。DPDK可以跳过内核，实现更快的数据包处理。
 

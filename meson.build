@@ -1,5 +1,9 @@
 project('dpdk-tutorial', 'c')
 
+## option process ##
+enable_subs = get_option('enable_subs')
+
+## build dpdk ##
 enable_apps = 'pdump,proc-info,test-pmd'
 
 disable_dirvers = 'bus/dpaa,bus/ifpga,common/cnxk,compress/isal,compress/octeontx,compress/zlib'
@@ -11,16 +15,11 @@ dpdk_defaule_arg = 'disable_drivers=' + disable_dirvers
 dpdk_defaule_arg = dpdk_defaule_arg + ',' + 'enable_apps=' + enable_apps
 dpdk_defaule_arg = dpdk_defaule_arg + ',' + 'default_library=' + 'static'
 
-# ref: https://mesonbuild.com/Using-the-WrapDB.html
-
 subproject('dpdk', default_options: dpdk_defaule_arg)
 libdpdk_proj = subproject('dpdk')
 
 libdpdk_dep = libdpdk_proj.get_variable('libdpdk_dep')
 
-subdir('hello-world')
-subdir('skeleton')
-subdir('multi-process-msg')
-subdir('trace')
-subdir('rx-tx-callback')
-subdir('rcu')
+foreach sub : enable_subs
+    subdir(sub)
+endforeach
