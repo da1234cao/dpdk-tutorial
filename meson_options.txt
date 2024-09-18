@@ -4,9 +4,10 @@ option(
     value: [
         'hello-world',
         'skeleton',
-        'multi-process-msg',
-        'trace',
         'rx-tx-callback',
+        'multi-process-msg',
+        'flow',
+        'trace',
         'rcu',
     ],
 )

@@ -27,3 +27,9 @@ meson compile
 
 - [hello-world](./hello-world/)
 - [env-prepare](./env-prepare/)
+- [skeleton](./skeleton/)
+- [rx-tx-callback](./rx-tx-callback/)
+- [multi-process-msg](./multi-process-msg/)
+- [flow_filtering](./flow_filtering/)
+- [rcu](./rcu/)
+- [trace](./trace/)

@@ -112,37 +112,10 @@ int main(int argc, char *argv[]) {
 }
 ```
 
-下面是构建代码。注意machine和ALLOW_EXPERIMENTAL_API，与DPDK构建时保持一致。
-
-```cmake
-cmake_minimum_required(VERSION 3.11)
-
-project(dpdk_trace_test)
-
-# arch的参数和编译dpdk时的cpu_instruction_set参数保持一致
-set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} -march=corei7")
-set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -march=corei7")
-
-# 和dpdk-meson中保持一致
-add_definitions(-DALLOW_EXPERIMENTAL_API)
-
-find_package(PkgConfig REQUIRED)
-pkg_check_modules(LIBDPDK REQUIRED libdpdk)
-include_directories(${LIBDPDK_STATIC_INCLUDE_DIRS})
-link_directories(${LIBDPDK_STATIC_LIBRARY_DIRS})
-
-add_executable(${PROJECT_NAME}  trace_point_register.c main.c)
-target_link_libraries(${PROJECT_NAME} PRIVATE ${LIBDPDK_STATIC_LIBRARIES})
-```
-
 输出如下。
 
 ```shell
-mkdir build && cd build
-cmake .. -DCMAKE_BUILD_TYPE=Debug -DCMAKE_PREFIX_PATH="YOUR_DPDK_INSTALL_PATH"
-make
-
-./dpdk_trace_test --trace-bufsz=2M --trace-dir=.
+./trace --trace-bufsz=2M --trace-dir=.
 hello trace 1
 EAL: Detected CPU lcores: 8
 EAL: Detected NUMA nodes: 1

@@ -12,7 +12,7 @@
 
 参考：[Linux内核同步机制之（七）：RCU基础](http://www.wowotech.net/kernel_synchronization/rcu_fundamentals.html)、 [What is RCU? -- "Read, Copy, Update" — The Linux Kernel documentation](https://www.kernel.org/doc/html/next/RCU/whatisRCU.html)
 
-上面两篇文档交叉着看下，基本能明白RCU的概念。(~~我英语比较烂，读英文隔着点意思，我更喜欢中文文档~~
+上面两篇文档交叉着看下，基本能明白RCU的概念。
 
 **下面内容，来自上面链接**。
 
