@@ -7,6 +7,8 @@ option(
         'rx-tx-callback',
         'multi-process-msg',
         'flow',
+        'ip_fragmentation',
+        'service_cores',
         'trace',
         'rcu',
     ],

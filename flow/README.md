@@ -129,7 +129,11 @@ struct rte_flow *generate_ipv4_flow(uint16_t port_id, uint16_t rx_q,
 /* >8 End of function responsible for creating the flow rule. */
 ```
 
-## 最后
+## 附录
+
+### 最后
+
+这个示例我在虚拟机上跑不起来。因为我的虚拟网卡的驱动是virtio。
 
 我们现在已经了解了 dpdk flow 最简单的使用了。难度大概是 “1+1=2”。
 

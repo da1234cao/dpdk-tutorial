@@ -32,7 +32,24 @@ virtualbox中配置内部网络的方式，如下图。
 
 ![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/bff3ba3de7fed5fc5ffb034e627db1c9.png#pic_center)
 
+## 虚拟网卡的选择
 
+总的来说，先随意选一种。demo程序出问题的时候，再选择合适的网卡。
+
+### virtio driver
+
+可以日常测试使用。但是它不支持 flow control。可见：[1. Overview of Networking Drivers — Data Plane Development Kit 24.11.0-rc0 documentation](https://doc.dpdk.org/guides/nics/overview.html)
+
+
+### e1000 driver
+
+使用的时候，留意到它只支持 2Tx, 2Rx queues。可见：[[E1000-devel] Does e1000e driver NOT need multiqueue?](https://e1000-devel.narkive.com/EXvuAoBW/does-e1000e-driver-not-need-multiqueue)
+
+时间使用时，它的驱动是，`net_e1000_em` 。按理来说，e1000 是支持 flow control的。在虚拟机中测试的时候，不支持。要想知道具体原因，可能得看DPDK源码了。
+
+### 不支持的虚拟网卡
+
+- 8139[RTL8139D(L) - Realtek](https://www.realtek.com/Product/Index?id=488&cate_id=786)
 
 ---
 
