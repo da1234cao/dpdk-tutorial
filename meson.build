@@ -2,6 +2,22 @@ project('dpdk-tutorial', 'c')
 
 ## option process ##
 enable_subs = get_option('enable_subs')
+if enable_subs.length() == 0
+    enable_subs = [
+        'hello-world',
+        'skeleton',
+        'rx-tx-callback',
+        'multi-process-msg',
+        'flow',
+        'ip_fragmentation',
+        'service_cores',
+        'trace',
+        'rcu',
+        'ipv4_multicast',
+    ]
+endif
+
+message('enable_subs:' + ','.join(enable_subs))
 
 ## build dpdk ##
 dpdk_enable_apps = 'enable_apps=pdump,proc-info,test-pmd'

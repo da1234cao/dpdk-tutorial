@@ -1,15 +1,5 @@
 option(
     'enable_subs',
     type: 'array',
-    value: [
-        'hello-world',
-        'skeleton',
-        'rx-tx-callback',
-        'multi-process-msg',
-        'flow',
-        'ip_fragmentation',
-        'service_cores',
-        'trace',
-        'rcu',
-    ],
+    value: [],
 )

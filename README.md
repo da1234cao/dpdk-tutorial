@@ -1,6 +1,6 @@
 # 项目的构建
 
-首先是准备python环境。
+首先是准备python环境(我用的是python3.12)。
 
 ```shell
 ## 准备一个pyenv环境：https://www.da1234cao.space/2024/97/
@@ -19,7 +19,10 @@ dependency: gcc, g++, clang, ....
 接着开始构建这个项目。这个项目会自动拉取和构建DPDK。
 
 ```shell
-meson setup build && cd build
+meson setup build
+# meson setup --reconfigure  build
+# meson configure -Denable_subs='' -Dbuildtype=debug build
+cd build
 meson compile
 ```
 
@@ -35,3 +38,4 @@ meson compile
 - [flow](./flow/)
 - [rcu](./rcu/)
 - [trace](./trace/)
+- [ip_fragmentation](./ip_fragmentation/)
