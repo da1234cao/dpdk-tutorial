@@ -30,7 +30,9 @@ dpdk_disable_dirvers = dpdk_disable_dirvers + ',' + 'net/ipn3ke,net/liquidio,net
 
 dpdk_default_library = 'default_library=static'
 
-dpdk_defaule_arg = [dpdk_enable_apps, dpdk_disable_dirvers, dpdk_default_library]
+dpdk_examples = 'examples=all'
+
+dpdk_defaule_arg = [dpdk_enable_apps, dpdk_disable_dirvers, dpdk_default_library, dpdk_examples]
 
 subproject('dpdk', default_options: dpdk_defaule_arg)
 libdpdk_proj = subproject('dpdk')
